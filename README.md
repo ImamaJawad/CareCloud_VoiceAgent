@@ -1,4 +1,3 @@
-```markdown
 # CareCloud Patient Registration System
 
 ## Live Demo
@@ -63,4 +62,3 @@ Call +1 (323) 618-2132 and follow the prompts.
 - Add patient authentication/login
 - Add web dashboard for doctors
 - Migrate to managed PostgreSQL with backups
-```
