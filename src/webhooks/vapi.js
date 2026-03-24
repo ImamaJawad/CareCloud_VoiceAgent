@@ -10,9 +10,11 @@ router.post('/', async (req, res) => {
   if (message?.type === 'tool-calls') {
     const toolCall = message.toolCallList?.[0];
     const fnName = toolCall?.function?.name;
-    const args   = toolCall?.function?.arguments
-      ? JSON.parse(toolCall.function.arguments)
-      : {};
+    const args = toolCall?.function?.arguments
+  ? (typeof toolCall.function.arguments === 'string' 
+      ? JSON.parse(toolCall.function.arguments) 
+      : toolCall.function.arguments)
+  : {};
 
     console.log(`[TOOL CALL] ${fnName}`, args);
 
