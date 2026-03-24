@@ -62,3 +62,12 @@ Call +1 (323) 618-2132 and follow the prompts.
 - Add patient authentication/login
 - Add web dashboard for doctors
 - Migrate to managed PostgreSQL with backups
+
+## Security Notes
+- Phone numbers are validated but not encrypted (would add for production)
+- No audit logging yet (required for HIPAA compliance)
+- For production deployment would need:
+  - Encryption at rest and in transit
+  - Audit logs for all patient data access
+  - Role-based access control
+  - Regular security audits
